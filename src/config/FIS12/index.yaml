@@ -44,7 +44,6 @@ versions:
         flows: "./V-2.0.1/personalLoan/flows/index.yaml"
     supportedActions:
       $ref: "src/config/FIS12/V-2.0.1/supportedActions/index.yaml"      
-
   - id: 2.3.0
     reporting: false
     usecase:
