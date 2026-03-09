@@ -46,6 +46,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -195,6 +201,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form  
       - key: on_update
         type: on_update
         unsolicited: true
@@ -239,6 +257,42 @@ flows:
       - key: on_search3
         type: on_search
         unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+      - key: select
+        type: select
+        unsolicited: false
+        pair: on_select
+        owner: BAP
+        expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
+      - key: on_select
+        type: on_select
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+      - key: manual_review_form
+        label: form link provided in on_select
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.verification_status
+      - key: on_status_unsolicited3
+        type: on_status
+        unsolicited: true
         pair: null
         owner: BPP
         expect: false
@@ -354,13 +408,13 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: confirm
+      - key: confirm2
         type: confirm
         unsolicited: false
-        pair: on_confirm
+        pair: on_confirm2
         owner: BAP
         expect: false
-      - key: on_confirm
+      - key: on_confirm2
         type: on_confirm
         unsolicited: false
         pair: null
@@ -413,6 +467,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -560,6 +620,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
@@ -637,6 +709,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -784,6 +862,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
@@ -855,6 +945,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1003,6 +1099,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
@@ -1076,6 +1184,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1225,6 +1339,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update
         type: on_update
         unsolicited: true
@@ -1270,6 +1396,42 @@ flows:
       - key: on_search4
         type: on_search
         unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+      - key: select
+        type: select
+        unsolicited: false
+        pair: on_select
+        owner: BAP
+        expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
+      - key: on_select
+        type: on_select
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+      - key: manual_review_form
+        label: form link provided in on_select
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.verification_status
+      - key: on_status_unsolicited3
+        type: on_status
+        unsolicited: true
         pair: null
         owner: BPP
         expect: false
@@ -1385,13 +1547,13 @@ flows:
         pair: null
         owner: BPP
         expect: false
-      - key: confirm
+      - key: confirm2
         type: confirm
         unsolicited: false
-        pair: on_confirm
+        pair: on_confirm2
         owner: BAP
         expect: false
-      - key: on_confirm
+      - key: on_confirm2
         type: on_confirm
         unsolicited: false
         pair: null
@@ -1445,6 +1607,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1592,6 +1760,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
@@ -1670,6 +1850,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -1817,6 +2003,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
@@ -1889,6 +2087,12 @@ flows:
         pair: on_select
         owner: BAP
         expect: false
+        input:
+          - name: addon_selection
+            label: Select Add-ons
+            type: fis13_addon_select
+            required: false
+            reference: $.reference_data.selected_add_ons
       - key: on_select
         type: on_select
         unsolicited: false
@@ -2037,6 +2241,18 @@ flows:
         pair: null
         owner: BPP
         expect: false
+      - key: payment_form
+        label: payment link provided in on_confirm
+        type: DYNAMIC_FORM
+        unsolicited: false
+        pair: null
+        owner: BPP
+        expect: false
+        input:
+          - name: form_submission_id
+            label: Enter Form Submission id
+            type: DYNAMIC_FORM
+            reference: $.reference_data.payment_form
       - key: on_update_unsolicited
         type: on_update
         unsolicited: true
